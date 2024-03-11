@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.li button:active {
+    background:  #FAFAFA;
+}
+
+.li button:focus {
+    background: #0E56C2;
+    color: #ffffff;
+}
+
+.main .li,
+li {
+    list-style-type: none;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background:  #FAFAFA;
+    left: 0;
+    padding: 0;
+}
+
+.li {
+    display: flex;
+    flex-direction: column;
+}
+
+.li button {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    border: none;
+    color: #0E56C2;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    background:  #FAFAFA;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:900px) {
+    .main {
+        display: none;
+    }
+}

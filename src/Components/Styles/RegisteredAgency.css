@@ -1,0 +1,1383 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.adds {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.adds .in {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.in .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.9rem 0 0rem;
+    margin-bottom: 3rem;
+}
+
+.in .upr12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.in .lwr {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.in .lwr .upr1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.lwr .upr1 .options {
+    padding: .3rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    background: #0E56C2;
+    color: white;
+    outline: none;
+    gap: .5rem;
+}
+
+.lwr .upr1 .options .optn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #0E56C2;
+    color: white;
+    outline: none;
+}
+
+.in .lwr .upr1 .addsHeader {
+    font-size: 25px;
+    color: #1F384C;
+}
+
+
+
+.upr12 button {
+    padding: .8rem 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    background: #0E56C2;
+    color: white;
+    cursor: pointer;
+}
+
+
+.in .upr12 .addsHeader {
+    font-size: 25px;
+    color: #1F384C;
+}
+
+.in .container .add {
+    display: flex;
+    margin: .8rem 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.8rem;
+    box-shadow: 2px 2px 8px rgb(233, 241, 255);
+    border-radius: 8px;
+    position: relative;
+}
+
+.add .checked {
+    position: absolute;
+    right: -2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    box-sizing: border-box;
+}
+
+.checked .fullicn {
+    background: white;
+    padding: .4rem;
+    height: 21px;
+    width: 21px;
+    border-radius: 8px;
+    border: 1px solid #0E56C2;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.checked p {
+    background: white;
+    padding: .3rem;
+    border-radius: 8px;
+    border: 1px solid #0E56C2;
+    cursor: pointer;
+}
+
+.checked .editicn {
+    width: fit-content;
+    margin-left: 1.8rem;
+    box-sizing: border-box;
+}
+
+.checked img {
+    margin-right: 8px;
+    height: 35px;
+    width: 35px;
+}
+
+.add .box {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    cursor: pointer;
+}
+
+.box .docIcn {
+    background: rgba(36, 58, 255, 0.19);
+    padding: .8rem;
+    border-radius: 5px;
+}
+
+.box .moneyIcn {
+    background: rgba(64, 228, 169, 0.23);
+    padding: .8rem 1rem;
+    border-radius: 5px;
+}
+
+
+.box .inBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.inBox small {
+    font-size: 14px;
+    color: #9F9999;
+    font-weight: 400;
+}
+
+.inBox p {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.lwr .lwrlwr {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.lwrlwr .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+    width: 100%;
+}
+
+.card .cardadd {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 1.5rem 2.5rem;
+    box-shadow: 5px 4px 20px 0px rgb(177 221 239 / 53%);
+    border-radius: 5px;
+}
+
+.cardadd .image {
+    height: 200px;
+    width: 300px;
+}
+
+.cardadd .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardadd .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.details p {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 18px;
+    color: #1A1A1A;
+}
+
+.details p svg {
+    background: rgba(36, 58, 255, 0.19);
+    padding: .4rem;
+    border-radius: 5px;
+}
+
+.adds .popupadd {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    transition: .8s;
+    background: white;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+}
+
+.adds .active {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 2px 5px 15px rgb(17, 17, 17);
+    z-index: 10000;
+    display: flex;
+    border-radius: 15px;
+    width: 90%;
+    background: #F7F7FA;
+    margin-top: -80px;
+    height: fit-content;
+    overflow-Y: auto;
+}
+
+.active .in1 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.popupadd .in1 svg {
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.in1 .inputs {
+    margin: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputs .uprInput .label input {
+    border: 1px solid #C5C2C2;
+    width: 300px;
+    padding: .5rem 1rem;
+    outline: none;
+    border-radius: 15px;
+}
+
+.inputs .uprInput .label1 .address {
+    border: 1px solid #C5C2C2;
+    width: auto;
+    padding: .5rem 1rem;
+    outline: none;
+    border-radius: 15px;
+}
+
+.inputs .uprInput .label1 .address:focus {
+    border: 1px solid #0E56C2;
+}
+
+.inputs .uprInput .label input:focus {
+    border: 1px solid #0E56C2;
+}
+
+
+.inputs .lwrInput .label input {
+    border: 1px solid #C5C2C2;
+    outline: none;
+    width: 300px;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+}
+
+.inputs .lwrInput .label input:focus {
+    border: 1px solid #0E56C2;
+}
+
+.inputs p {
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    color: black;
+}
+
+.lwrInput .time {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.lwrInput .time input {
+    border: 1px solid #C5C2C2;
+    width: 10%;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    outline: none;
+}
+
+.lwrInput .time input:focus {
+    border: 1px solid #0E56C2;
+}
+
+.inputs .uprInput {
+    background: white;
+    display: flex;
+    margin-top: 3rem;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.inputs .lwrInput {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.inputs .uprInput .label {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: fit-content;
+}
+
+
+.inputs .uprInput .label1 {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+}
+
+.inputs .lwrInput .label {
+    display: flex;
+    gap: .3rem;
+    flex-direction: column;
+}
+
+.inputs .buttons {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 3rem;
+}
+
+.inputs .lwrInput .code {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 3rem;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    font-weight: 500;
+    border: 1px solid #40E4A9;
+    background: rgba(211, 248, 235, 0.50);
+
+
+}
+
+.buttons .cancel {
+    padding: .6rem 1.3rem;
+    border: 1px solid #0E56C2;
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttons .done {
+    padding: .6rem 1.8rem;
+    background: #0E56C2;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+/* popup2 */
+
+
+.adds .popupedit {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    transition: .8s;
+    background: white;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+}
+
+.adds .active1 {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 2px 5px 15px rgb(17, 17, 17);
+    z-index: 10000;
+    display: flex;
+    border-radius: 15px;
+    width: 90%;
+    background: #F7F7FA;
+    margin-top: -80px;
+    height: fit-content;
+    overflow-Y: auto;
+}
+
+.active1 .in2 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.popupedit .in2 svg {
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.in2 .inputs1 {
+    margin: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputs1 .uprInput1 .label input {
+    border: 1px solid #C5C2C2;
+    width: 300px;
+    padding: .5rem 1rem;
+    outline: none;
+    border-radius: 15px;
+}
+
+.inputs1 .uprInput1 .label1 .address {
+    border: 1px solid #C5C2C2;
+    width: auto;
+    padding: .5rem 1rem;
+    outline: none;
+    border-radius: 15px;
+}
+
+.inputs1 .uprInput1 .label1 .address:focus {
+    border: 1px solid #0E56C2;
+}
+
+.inputs1 .uprInput1 .label input:focus {
+    border: 1px solid #0E56C2;
+}
+
+
+.inputs1 .lwrInput .label input {
+    border: 1px solid #C5C2C2;
+    outline: none;
+    width: 300px;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+}
+
+.inputs1 .lwrInput .label input:focus {
+    border: 1px solid #0E56C2;
+}
+
+.inputs1 p {
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    color: black;
+}
+
+.lwrInput .time {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.lwrInput .time input {
+    border: 1px solid #C5C2C2;
+    width: 10%;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    outline: none;
+}
+
+.lwrInput .time input:focus {
+    border: 1px solid #0E56C2;
+}
+
+.inputs1 .uprInput1 {
+    background: white;
+    display: flex;
+    pointer-events: none;
+    opacity: 0.4;
+    margin-top: 3rem;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.inputs1 .lwrInput {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.inputs1 .uprInput1 .label {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: fit-content;
+}
+
+
+.inputs1 .uprInput1 .label1 {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+}
+
+.inputs1 .lwrInput .label {
+    display: flex;
+    gap: .3rem;
+    flex-direction: column;
+}
+
+.inputs1 .buttons {
+    display: flex;
+    align-self: flex-end;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.inputs1 .lwrInput .code {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 3rem;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    font-weight: 500;
+    border: 1px solid #40E4A9;
+    background: rgba(211, 248, 235, 0.50);
+
+
+}
+
+.buttons .cancel {
+    padding: .6rem 1.3rem;
+    border: 1px solid #0E56C2;
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttons .done {
+    padding: .6rem 1.8rem;
+    background: #0E56C2;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:3400px) {
+
+    .add .checked {
+        right: -3%;
+        align-items: center;
+    }
+
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:3076px) {
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:2659px) {
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:2243px) {
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width:2000px) {
+
+    .add .checked {
+        right: -3%;
+    }
+
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:1900px) {
+
+    .add .checked {
+        right: -3%;
+    }
+
+}
+
+@media screen and (max-width:1800px) {
+
+    .add .checked {
+        position: absolute;
+        right: -5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width:1784px) {
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:1584px) {
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:1315px) {
+
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:1240px) {
+
+    .inputs .uprInput .label input {
+        border: 1px solid #C5C2C2;
+        width: 200px;
+        padding: .5rem 1rem;
+        outline: none;
+        border-radius: 15px;
+    }
+
+
+    .inputs .lwrInput .label input {
+        border: 1px solid #C5C2C2;
+        outline: none;
+        width: 200px;
+        padding: .5rem 1rem;
+        border-radius: 15px;
+    }
+
+    .lwrInput input {
+        border: 1px solid #C5C2C2;
+        width: 110px;
+        padding: .5rem 1rem;
+        border-radius: 15px;
+        outline: none;
+    }
+
+
+
+
+
+
+
+    /* popup2 */
+
+    .inputs1 .uprInput1 .label input {
+        border: 1px solid #C5C2C2;
+        width: 200px;
+        padding: .5rem 1rem;
+        outline: none;
+        border-radius: 15px;
+    }
+
+
+    .inputs1 .lwrInput .label input {
+        border: 1px solid #C5C2C2;
+        outline: none;
+        width: 200px;
+        padding: .5rem 1rem;
+        border-radius: 15px;
+    }
+
+    .lwrInput1 input {
+        border: 1px solid #C5C2C2;
+        width: 110px;
+        padding: .5rem 1rem;
+        border-radius: 15px;
+        outline: none;
+    }
+}
+
+
+
+@media screen and (max-width:960px) {
+    .in .upr12 .addsHeader {
+        font-size: 23px;
+        color: #1F384C;
+    }
+
+    .in .container .add {
+        display: flex;
+        margin: .8rem 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        box-shadow: 2px 2px 8px rgb(233, 241, 255);
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .upr12 button {
+        padding: .6rem 1.8rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        border: none;
+        background: #0E56C2;
+        color: white;
+        cursor: pointer;
+    }
+
+    .add .checked {
+        position: absolute;
+        right: -3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .checked .fullicn {
+        background: white;
+        padding: .3rem;
+        height: 19px;
+        width: 19px;
+        border-radius: 8px;
+        border: 1px solid #0E56C2;
+    }
+
+    .checked p {
+        background: white;
+        padding: .2rem;
+        border-radius: 8px;
+        border: 1px solid #0E56C2;
+    }
+
+    .in .lwr .upr1 .addsHeader {
+        font-size: 23px;
+        color: #1F384C;
+    }
+
+
+    .add .box {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    .box .docIcn {
+        background: rgba(36, 58, 255, 0.19);
+        padding: .6rem;
+        border-radius: 5px;
+    }
+
+    .box .moneyIcn {
+        background: rgba(64, 228, 169, 0.23);
+        padding: .6rem .8rem;
+        border-radius: 5px;
+    }
+
+
+    .box .inBox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inBox small {
+        font-size: 12px;
+        color: #9F9999;
+        font-weight: 400;
+    }
+
+    .inBox p {
+        font-size: 18px;
+        color: black;
+        font-weight: 600;
+    }
+
+}
+
+
+@media screen and (max-width:830px) {
+    .in .upr12 .addsHeader {
+        font-size: 19px;
+        color: #1F384C;
+    }
+
+    .lwrlwr .card .cardadd {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        box-shadow: 0px 4px 24px 0px rgba(207, 236, 248, 0.25);
+        border-radius: 5px;
+    }
+
+
+
+    .buttons .cancel {
+        padding: .6rem 1.1rem;
+    }
+
+    .buttons .done {
+        padding: .6rem 1.6rem;
+    }
+
+    .in .container .add {
+        display: flex;
+        margin: .8rem 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.3rem;
+        box-shadow: 2px 2px 8px rgb(233, 241, 255);
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .in .lwr .upr1 .addsHeader {
+        font-size: 21px;
+        color: #1F384C;
+    }
+
+    .upr12 button {
+        padding: .4rem 1.6rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        border: none;
+        background: #0E56C2;
+        color: white;
+        cursor: pointer;
+    }
+
+    .add .checked {
+        right: -5%;
+        box-sizing: border-box;
+    }
+
+    .checked .fullicn {
+        background: white;
+        padding: .3rem;
+        height: 17px;
+        width: 17px;
+        border-radius: 8px;
+        border: 1px solid #0E56C2;
+    }
+
+    .checked p {
+        background: white;
+        padding: .2rem;
+        border-radius: 8px;
+        border: 1px solid #0E56C2;
+    }
+
+    .add .box {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    .box .docIcn {
+        background: rgba(36, 58, 255, 0.19);
+        padding: .4rem;
+        border-radius: 5px;
+    }
+
+    .box .moneyIcn {
+        background: rgba(64, 228, 169, 0.23);
+        padding: .4rem .6rem;
+        border-radius: 5px;
+    }
+
+    .box .inBox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inBox small {
+        font-size: 10px;
+        color: #9F9999;
+        font-weight: 400;
+    }
+
+    .inBox p {
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (max-width:789px) {
+
+    .lwrlwr .card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .cardadd .image {
+        width: 400px;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    .lwrlwr .card .cardadd {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.2rem;
+        box-shadow: 0px 4px 24px 0px rgba(207, 236, 248, 0.25);
+        border-radius: 5px;
+    }
+
+}
+
+
+@media screen and (max-width:735px) {
+    .box .docIcn {
+        background: rgba(36, 58, 255, 0.19);
+        padding: .3rem;
+        border-radius: 5px;
+    }
+
+    .lwrlwr .card .cardadd {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem 2rem;
+        box-shadow: 0px 4px 24px 0px rgba(207, 236, 248, 0.25);
+        border-radius: 5px;
+    }
+
+    .buttons .cancel {
+        padding: .6rem 1rem;
+    }
+
+    .inputs p {
+        font-size: 19px;
+        margin: .5rem .3rem;
+    }
+
+    .inputs1 p {
+        font-size: 19px;
+        margin: .5rem .3rem;
+    }
+
+    .buttons .done {
+        padding: .6rem 1.5rem;
+    }
+
+    .in .lwr .upr1 .addsHeader {
+        font-size: 19px;
+        color: #1F384C;
+    }
+
+    .box .moneyIcn {
+        background: rgba(64, 228, 169, 0.23);
+        padding: .3rem .5rem;
+        border-radius: 5px;
+    }
+
+    .upr12 button {
+        padding: .4rem 1.4rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        border: none;
+        background: #0E56C2;
+        color: white;
+        cursor: pointer;
+    }
+
+    .checked .fullicn {
+        background: white;
+        padding: .3rem;
+        height: 15px;
+        width: 15px;
+        border-radius: 8px;
+        border: 1px solid #0E56C2;
+    }
+
+    .checked p {
+        background: white;
+        padding: .2rem;
+        border-radius: 8px;
+        border: 1px solid #0E56C2;
+    }
+}
+
+
+@media screen and (max-width:660px) {
+    .add .box {
+        display: flex;
+        align-items: center;
+        gap: .3rem;
+    }
+
+}
+
+@media screen and (max-width:635px) {
+    .inputs .uprInput .label {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        width: 100%;
+    }
+
+    .inputs1 .uprInput1 .label {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        width: 100%;
+    }
+
+    .buttons .cancel {
+        padding: .6rem .9rem;
+    }
+
+    .buttons .done {
+        padding: .6rem 1.4rem;
+    }
+
+
+    .inputs .lwrInput .label {
+        display: flex;
+        gap: .3rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .inputs .uprInput .label input {
+        width: auto;
+    }
+
+
+    .inputs .lwrInput .label input {
+        width: auto;
+    }
+
+    .inputs .lwrInput .time {
+        width: 100%;
+    }
+
+
+    .lwrInput .time input {
+        width: 100%;
+    }
+
+
+
+    /* popoup2 */
+
+    .inputs1 .lwrInput .label {
+        display: flex;
+        gap: .3rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .inputs1 .uprInput1 .label input {
+        width: auto;
+    }
+
+
+    .inputs1 .lwrInput .label input {
+        width: auto;
+    }
+
+    .inputs1 .lwrInput .time {
+        width: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width:597px) {
+    .in .container {
+        max-height: 450px;
+        padding: 0;
+        overflow-y: scroll;
+    }
+
+    .inputs .lwrInput .code {
+        padding: 1rem 2rem;
+        font-size: 13px;
+    }
+
+    .inputs1 .lwrInput .code {
+        padding: 1rem 2rem;
+        font-size: 13px;
+    }
+
+    .in .container .add {
+        /* padding: 3rem; */
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .add .box {
+        width: 100%;
+        padding: 0rem 1rem;
+    }
+
+    .box .inBox {
+        min-width: 100px;
+    }
+
+    .add .checked {
+        position: relative;
+        left: 0;
+        gap: 0;
+        box-sizing: border-box;
+        top: 0;
+    }
+
+    .in .lwr .upr1 .addsHeader {
+        font-size: 19px;
+        color: #1F384C;
+    }
+
+
+}
+
+@media screen and (max-width:527px) {
+
+    .cardadd .image {
+        width: 300px;
+    }
+
+}
+
+
+
+@media screen and (max-width:412px) {
+
+    .cardadd .image {
+        width: 250px;
+    }
+
+}
+
+
+@media screen and (max-width:395px) {
+    .inputs .lwrInput .code {
+        padding: 1rem 1rem;
+        font-size: 12px;
+    }
+
+    .inputs p {
+        font-size: 18px;
+        margin: .5rem .3rem;
+    }
+
+    .inputs1 .lwrInput .code {
+        padding: 1rem 1rem;
+        font-size: 12px;
+    }
+
+    .inputs1 p {
+        font-size: 18px;
+        margin: .5rem .3rem;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .inputs .lwrInput .code {
+        padding: .8rem .5rem;
+        font-size: 11px;
+    }
+
+    .inputs1 .lwrInput .code {
+        padding: .8rem .5rem;
+        font-size: 11px;
+    }
+
+    .adds .in .lwr .lwrlwr .card .cardadd {
+
+        padding: 1.3rem 1.8rem;
+    }
+
+    .cardadd .image {
+        width: 200px;
+    }
+
+    .inputs p {
+        font-size: 18px;
+        margin: .5rem .3rem;
+    }
+
+    .inputs1 p {
+        font-size: 18px;
+        margin: .5rem .3rem;
+    }
+
+    .in1 .inputs {
+        margin: .8rem .5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .in2 .inputs1 {
+        margin: .8rem .5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popupadd .in1 svg {
+        padding: .6rem;
+        height: 30px;
+        width: 30px;
+    }
+
+    .popupedit .in2 svg {
+        padding: .6rem;
+        height: 30px;
+        width: 30px;
+    }
+
+    .buttons .cancel {
+        padding: .6rem .8rem;
+    }
+
+    .buttons .done {
+        padding: .6rem 1.3rem;
+    }
+}
+
+
+@media screen and (max-width:300px) {
+
+    .cardadd .image {
+        width: 170px;
+    }
+
+}

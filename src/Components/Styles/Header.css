@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999999;
+}
+
+.header .logo {
+    height: 80px;
+    aspect-ratio: 1.2/1;
+    margin: .5rem 2rem;
+    cursor: pointer;
+}
+
+.header .headerAccountSec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+.headerAccountSec .search {
+    display: flex;
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    background: #FAFAFA;
+    border-radius: 15px;
+    max-width: 600px;
+    min-width: 250px;
+    margin-left: 2rem;
+}
+
+.search button {
+    border: none;
+    background: none;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.search input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: fit-content;
+    margin-left: 1rem;
+    font-size: 18px;
+}
+
+.headerAccountSec .NA {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.headerAccountSec .NA .navigator {
+    display: none;
+}
+
+.NA .notification {
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-right: 1px solid black;
+}
+
+.NA .notification .logout {
+    display: block;
+}
+
+.NA .account {
+    display: flex;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+}
+
+.NA .account span {
+    padding: .5rem 1.1rem;
+    border-radius: 50%;
+    background: gray;
+    font-size: 25px;
+    color: white;
+}
+
+.account .AD {
+    margin-left: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AD p {
+    font-size: 18px;
+    color: #40558A;
+    font-weight: 600;
+}
+
+.AD small {
+    font-size: 11px;
+    color: var(--black-medium-emphasis, rgba(0, 0, 0, 0.60));
+}
+
+.header .closeNavbar {
+    display: none;
+}
+
+.header .toddleNavbar {
+    display: none;
+}
+
+@media screen and (max-width:828px) {
+    .headerAccountSec .search {
+        margin-left: unset;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .NA .notification .logout {
+        display: none;
+    }
+
+
+    .blur {
+        position: absolute;
+        height: 100dvh;
+        width: 100%;
+        z-index: 50;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.171);
+    }
+
+    .headerAccountSec .NA {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .NA .notification {
+        display: flex;
+        width: fit-content;
+    }
+
+    .NA .notification {
+        display: flex;
+        border-right: none;
+        width: fit-content;
+    }
+
+    .headerAccountSec .NA .navigator {
+        display: block;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .headerAccountSec .NA .navigator .li li {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        line-height: 35px;
+        cursor: pointer;
+        border-bottom: 1px solid black;
+    }
+
+    .headerAccountSec .NA .navigator .li li:last-child {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        border-bottom: none;
+    }
+
+    .header .headerAccountSec {
+        position: absolute;
+        background: white;
+        height: max-content;
+        width: 80%;
+        border-radius: 1rem;
+        top: -25rem;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        transform: translate(-50%);
+        z-index: 22222;
+        box-shadow: 2px 3px 10px rgba(178, 181, 184, 0.904);
+        transition: 0.5s ease-in-out;
+
+        .closeNavbar {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+        }
+    }
+
+    .NA .account span {
+        padding: .3rem .9rem;
+        border-radius: 50%;
+        background: gray;
+        font-size: 25px;
+        color: white;
+    }
+
+    .headerAccountSec .search {
+        margin-top: 2rem;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header .toddleNavbar {
+        margin-right: 2rem;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .header .activeNavbar {
+        top: 5rem;
+    }
+
+    .headerAccountSec .NA {
+        margin-top: 1rem;
+    }
+
+    .header .closeNavbar {
+        display: flex;
+    }
+
+    .header .toddleNavbar {
+        display: flex;
+    }
+
+    .headerAccountSec .search {
+        display: flex;
+        border: 1px solid black;
+        padding: .5rem .8rem;
+        background: #FAFAFA;
+        border-radius: 15px;
+    }
+
+    .search button {
+        border: none;
+        background: none;
+        gap: .5rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .search input {
+        background: none;
+        outline: none;
+        border: none;
+        width: 100%;
+        height: fit-content;
+        margin-left: 1rem;
+        font-size: 13px;
+    }
+
+    .AD p {
+        font-size: 15px;
+    }
+
+    .AD small {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .headerAccountSec .search {
+        width: 80%;
+    }
+
+    .header .logo {
+        height: 60px;
+        width: 60px;
+        margin: 1rem 2rem;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width:320px) {
+    .headerAccountSec .NA {
+        flex-direction: column;
+    }
+
+    .NA .notification {
+        border-right: none;
+    }
+}

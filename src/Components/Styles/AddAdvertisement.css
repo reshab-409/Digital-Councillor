@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.advertisement {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.advertisement .in {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.in .title {
+    display: flex;
+}
+
+.title p {
+    font-size: 22px;
+    color: #1F384C;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.in .box12 {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 24px 0px rgba(207, 236, 248, 0.50);
+    gap: 1rem;
+}
+
+.box12 .picUpload {
+    width: fit-content;
+    margin: 1rem;
+}
+
+.picUpload .outline {
+    border-radius: 10px;
+    border: 1px dashed var(--primary-color, #0E56C2);
+    background: #FFF;
+    padding: 1.3rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outline svg {
+    background: #DEE8FF;
+    padding: 1rem;
+    border-radius: 42%;
+    cursor: pointer;
+}
+
+.outline p {
+    font-size: 13px;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.box12 .inputSec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.inputSec .input121 {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.box12 .inputSec .input121 .fm {
+    border-radius: 15px;
+    border: 1px solid #C5C2C2;
+    background: #FFF;
+    height: 20px;
+    padding: 0.6rem 1rem;
+}
+
+.inputSec p {
+    padding: 1rem 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #D3F8EB;
+}
+
+.in .addCard {
+    margin-top: 2rem;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+    box-shadow: 0px 4px 24px 0px rgba(207, 236, 248, 0.50);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.addCard .leftSec {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 300px;
+}
+
+.in .title2 {
+    font-size: 22px;
+    color: #1F384C;
+    font-weight: 400;
+    margin-top: 3rem;
+}
+
+.addCard .leftSec img {
+    height: 90%;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.leftSec p {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    background: #D3F8EB;
+    margin-top: 1rem;
+}
+
+.addCard .logo {
+    width: 20%;
+    display: flex;
+    aspect-ratio: 1.2/1;
+    justify-content: center;
+    align-items: center;
+}
+
+.addCard .logo img {
+    height: 110px;
+    width: 110px;
+}
+
+.detailes {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem;
+
+}
+
+.detailes p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.detailes p small {
+    font-size: 20px;
+    color: #0E56C2;
+}
+
+.in .button51 {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width:1111px) {
+    .detailes p {
+        font-size: 16px;
+    }
+   
+    
+    .detailes p small {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .addCard .leftSec {
+        width: 100%;
+    }
+    .in .title p {
+        font-size: 18px;
+    }
+
+    .addCard .logo img {
+        height: 100px;
+        width: 100px;
+    }
+    .in .title2 {
+        font-size: 18px;
+        color: #1F384C;
+        font-weight: 400;
+        margin-top: 3rem;
+    }
+    .inputSec p {
+        font-size: 12px;
+    }
+    .leftSec p {
+        font-size: 12px;
+    }
+    
+    .in .addCard {
+        flex-wrap: wrap;
+    }
+
+    .addCard .logo {
+        width: fit-content;
+        aspect-ratio: 1.2/1;
+    }
+
+    .in .box12 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box12 .picUpload {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    .inputSec .input121 {
+        justify-content: center;
+    }
+
+    .input121 .fm {
+        width: 100%;
+    }
+    .detailes p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .detailes p small {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:451px) {
+    .in .addCard {
+        justify-content: center;
+    }
+    .addCard .logo img {
+        height: 80px;
+        width: 80px;
+    }
+    .addCard .logo {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+}
